@@ -43,8 +43,10 @@ componentDidMount = async () => {
       return (
         <div>
              <Link to={`/users/${user._id}/visions`}>
-            Name: {user.userName}
+            Name: {user.userName} 
           </Link>
+          <button>EDIT</button>
+          <button>DELETE</button>
         </div>
       )
     })
