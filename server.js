@@ -18,9 +18,7 @@ const app = express();
 
 app.use(logger('dev'));
 app.use(express.json());
-app.use(express.urlencoded({
-    extended: false
-}));
+app.use(express.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(__dirname + '/client/build/'))
 
@@ -28,6 +26,13 @@ app.use(express.static(__dirname + '/client/build/'))
 app.get('/', (req,res) => {
     res.sendFile(__dirname + '/client/build/index.html')
 })
+
+const usersController = require('./routes/usersController')
+const visionsController = require('./routes/visionsController')
+
+app.use('/api/users', usersController)
+app.use('/api/users/:userId/visions', visionsController)
+
 
 
 
