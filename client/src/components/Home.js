@@ -10,7 +10,7 @@ export default class Home extends Component {
     return (
       <div>
         <h1>WELCOME!</h1>
-        <Link to='/login'>Log In</Link>
+        <button><Link to='/login'>Log In</Link></button>
       </div>
     )
   }
