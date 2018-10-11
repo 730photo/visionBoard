@@ -11,11 +11,15 @@ export default class SearchBar extends Component {
         this.setState({ keyword })
     }
 
+    submitHandler = () => {
+        
+    }
+
   render() {
     return (
       <div>
         <input type="text" name="keyword" value={this.state.keyword} onChange={this.handleChange}/>
-        <button>Search</button>
+        <button onClick={this.submitHandler}>Search</button>
       </div>
     )
   }

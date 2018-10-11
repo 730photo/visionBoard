@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import Gallery from './Gallery'
-
+import VisionBoard from './VisionBoard'
 
 export default class Vision extends Component {
      state = {
-        selectedFile: null
+        selectedFile: null,
+        showGallery: false
       }
 
   fileSelectedHandler = event => {
@@ -19,11 +20,26 @@ export default class Vision extends Component {
     fd.append('image', this.state.selectedFile, this.state.selectedFile.name)
     axios.post('')
   }
+
+  toggleView = () => {
+    this.setState({ showGallery: !this.state.showGallery })
+  }
+
+
+  // write a function that takes 1 argument which is the url. 
+  // The function will add url to an array in the state of vision
+  // pass array of urls from vision to visionBoard
+  // define function
+  
   
   render() {
     return (
       <div>
-        <Gallery />
+        <button onClick={this.toggleView}>TOGGLE</button>
+        {this.state.showGallery ? 
+          <Gallery saveUrl={this.saveUrl}/> :
+          <VisionBoard />
+        }
       </div>
     )
   }

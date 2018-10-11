@@ -23,20 +23,26 @@ export default class Gallery extends Component {
             'https://i.imgur.com/EWOSoWK.jpg'
         ]
     }
+
+
   render() {
 
     return (
       <StyledGallery>
         <img src={this.state.urls[0]} alt="first"/> 
-        <button>Select</button>
+        <button onClick={this.props.saveUrl}>Select</button>
+
         <img src={this.state.urls[1]} alt="second"/>
-        <button>Select</button>
+        <button onClick={this.props.saveUrl}>Select</button>
+
         <img src={this.state.urls[2]} alt="third"/>
-        <button>Select</button> 
+       <button onClick={this.props.saveUrl}>Select</button>
+
         <img src={this.state.urls[3]} alt="fourth"/>
-        <button>Select</button> 
+        <button onClick={this.props.saveUrl}>Select</button>
+
         <img src={this.state.urls[4]} alt="fifth"/>
-        <button>Select</button>
+        <button onClick={this.props.saveUrl}>Select</button>
 
       </StyledGallery>
     )
