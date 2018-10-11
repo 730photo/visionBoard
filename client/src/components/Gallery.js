@@ -30,19 +30,19 @@ export default class Gallery extends Component {
     return (
       <StyledGallery>
         <img src={this.state.urls[0]} alt="first"/> 
-        <button onClick={this.props.saveUrl}>Select</button>
+        <button value={this.state.urls[0]} onClick={this.props.saveUrl}>Select</button>
 
         <img src={this.state.urls[1]} alt="second"/>
-        <button onClick={this.props.saveUrl}>Select</button>
+        <button value={this.state.urls[1]} onClick={this.props.saveUrl}>Select</button>
 
         <img src={this.state.urls[2]} alt="third"/>
-       <button onClick={this.props.saveUrl}>Select</button>
+       <button value={this.state.urls[2]} onClick={this.props.saveUrl}>Select</button>
 
         <img src={this.state.urls[3]} alt="fourth"/>
-        <button onClick={this.props.saveUrl}>Select</button>
+        <button value={this.state.urls[3]} onClick={this.props.saveUrl}>Select</button>
 
         <img src={this.state.urls[4]} alt="fifth"/>
-        <button onClick={this.props.saveUrl}>Select</button>
+        <button value={this.state.urls[4]} onClick={this.props.saveUrl}>Select</button>
 
       </StyledGallery>
     )

@@ -1,14 +1,42 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
-export default class VisionBoard extends Component {
-    state ={
-        urls: []
+
+const StyledVisionBoard = styled.div`
+    h1 {
+        text-align: center;
     }
+
+    img {
+        width: 200px;
+        height: 150px;
+        float: left;
+        margin-left: 20px;
+        margin-right: auto;
+    }
+`
+export default class VisionBoard extends Component {
+   
+
+//map return every index value in an array
   render() {
+      const urlImages = this.props.urlArray.map((image)=> {
+          return(
+              <div>
+                  <img src={image} alt="blah"/>
+                </div>
+              
+          )
+      })
     return (
-      <div>
-        Vision Board
-      </div>
+      //every time you click the select button, an image will be stored on the vision board
+        <div>
+            <h1>Vision Board</h1>
+            <StyledVisionBoard>
+            {urlImages}
+            </StyledVisionBoard>
+            </div>
+      
     )
   }
 }
