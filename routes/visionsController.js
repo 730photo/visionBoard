@@ -2,6 +2,7 @@
 const router = require('express').Router({mergeParams: true})
 const { User, Vision } = require('../db/model')
 
+// making a promise when you click on the 'new vision' button
 router.post('/', (req, res) => {
     const newVision = new Vision()
     User.findById(req.params.userId)
