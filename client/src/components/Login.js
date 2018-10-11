@@ -49,7 +49,6 @@ export default class Login extends Component {
       return (
         <div>
           <Link to={`/users/${user._id}/visions`}>Name: {user.userName}</Link>
-          <button>EDIT</button>
           <button onClick={() => this.handleDelete(user._id)}>DELETE</button>
         </div>
       );
