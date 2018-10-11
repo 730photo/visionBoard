@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import Gallery from './Gallery'
+
 
 export default class Vision extends Component {
      state = {
@@ -21,8 +23,7 @@ export default class Vision extends Component {
   render() {
     return (
       <div>
-        <input type="file" onChange={this.fileSelectedHandler} />
-        <button onClick={this.fileUploadHandler}>Upload</button>
+        <Gallery />
       </div>
     )
   }
