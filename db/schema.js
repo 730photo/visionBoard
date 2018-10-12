@@ -9,7 +9,8 @@ const VisionSchema = new Schema({
 })
 
 const UserSchema = new Schema({
-    userName: String
+    userName: String,
+    visions: [VisionSchema]
 })
 
 module.exports = {

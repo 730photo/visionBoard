@@ -11,9 +11,7 @@ mongoose.connect(
   const { User } = require('./model')
 
   const reg = new User({
-      userName: 'architekespy',
-      age: 26,
-      occupation: 'webDev'
+      userName: 'architekespy'
   })
 
 

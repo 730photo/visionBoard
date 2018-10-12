@@ -42,6 +42,14 @@ export default class Login extends Component {
     // await this.getAllUsers()
   };
 
+
+  // handles the edit function
+  handleEdit = async userId => {
+    await axios.put(`/api/users/${userId}`);
+    const response = await axios.get('/api/users');
+    this.setState({ users: response.data });
+  }
+
   // turns the userName into a link and tells it where to go once you click on it
   render() {
     const usersList = this.state.users.map((user, i) => {
@@ -50,6 +58,7 @@ export default class Login extends Component {
         <div>
           <Link to={`/users/${user._id}/visions`}>Name: {user.userName}</Link>
           <button onClick={() => this.handleDelete(user._id)}>DELETE</button>
+          <button onClick={() => this.handleEdit(user._id)}>EDIT</button>
         </div>
       );
     });

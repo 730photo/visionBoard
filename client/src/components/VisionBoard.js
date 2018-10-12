@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import axios from 'axios'
 
 
 const StyledVisionBoard = styled.div`
@@ -17,10 +18,18 @@ const StyledVisionBoard = styled.div`
 `
 export default class VisionBoard extends Component {
    
+    state = {
+        
+    }
 
+    saveToDataBase = async () => {
+        await axios.post(`/api/users/${this.params.userId}/visions`)
+    }
+
+    // settingState = {}
 //map return every index value in an array
   render() {
-      const urlImages = this.props.urlArray.map((image)=> {
+    const urlImages = this.props.urlArray.map((image)=> {
           return(
               <div>
                   <img src={image} alt="blah"/>
