@@ -6,8 +6,9 @@ export default class Login extends Component {
   state = {
     users: [],
     newUser: {
-      userName: ""
-    }
+      userName: "",
+    },
+    edit : true
   };
 
 
@@ -44,10 +45,17 @@ export default class Login extends Component {
 
 
   // handles the edit function
-  handleEdit = async userId => {
-    await axios.put(`/api/users/${userId}`);
-    const response = await axios.get('/api/users');
-    this.setState({ users: response.data });
+  handleEdit = async (i) => {
+    const response = await axios.put(`/api/users/${this.state.users[i]._id}`, this.state.users[i]);
+    console.log(response)
+  }
+  
+  
+//handles the edit change function
+  handleEditChange = (e, i) => {
+    const users = [ ...this.state.users ]
+    users[i][e.target.name] = e.target.value
+    this.setState({ users })
   }
 
   // turns the userName into a link and tells it where to go once you click on it
@@ -58,7 +66,15 @@ export default class Login extends Component {
         <div>
           <Link to={`/users/${user._id}/visions`}>Name: {user.userName}</Link>
           <button onClick={() => this.handleDelete(user._id)}>DELETE</button>
-          <button onClick={() => this.handleEdit(user._id)}>EDIT</button>
+          <form onSubmit={() => this.handleEdit(i)}>
+            <input 
+              type="text"
+              name="userName"
+              value={user.userName}
+              onChange={(event) => this.handleEditChange(event, i)}
+            />
+            <button type="submit">EDIT</button>
+          </form>
         </div>
       );
     });
@@ -79,7 +95,12 @@ export default class Login extends Component {
           />
           <input type="submit" value="Create New User" />
         </form>
+
+        
+
       </div>
     );
+    }
   }
-}
+
+// t/f this.state.edit ? <input> T F link
