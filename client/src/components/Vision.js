@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 // import axios from 'axios'
 import Gallery from './Gallery'
 import VisionBoard from './VisionBoard'
+import styled from 'styled-components'
+
+
 
 export default class Vision extends Component {
      state = {
@@ -48,6 +51,7 @@ export default class Vision extends Component {
 
   render() {
     return (
+      
       <div>
         <button onClick={this.toggleView}>TOGGLE</button>
         {this.state.showGallery ? 
@@ -55,6 +59,7 @@ export default class Vision extends Component {
           <VisionBoard urlArray={this.state.urlArray}/>
         }
       </div>
+      
     )
   }
 }

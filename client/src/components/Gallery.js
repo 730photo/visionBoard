@@ -26,7 +26,10 @@ export default class Gallery extends Component {
             'https://i.imgur.com/YFSvdgl.jpg', 
             'https://i.imgur.com/CAjGSu6.jpg',
             'https://i.imgur.com/x1ecyHR.jpg',
-            'https://i.imgur.com/Clem5OF.jpg'
+            'https://i.imgur.com/Clem5OF.jpg',
+            'https://i.imgur.com/Tadz61C.jpg',
+            'https://i.imgur.com/qGXsfmZ.jpg',
+            'https://i.imgur.com/CX4gGYb.jpg'
         ]
     }
 
@@ -73,6 +76,15 @@ export default class Gallery extends Component {
        
         <img src={this.state.urls[11]} alt="twelth"/>
         <button value={this.state.urls[11]} onClick={this.handleClick}>Select</button>
+
+        <img src={this.state.urls[12]} alt="thirteenth"/>
+        <button value={this.state.urls[12]} onClick={this.handleClick}>Select</button>
+
+         <img src={this.state.urls[13]} alt="fourteenth"/>
+        <button value={this.state.urls[13]} onClick={this.handleClick}>Select</button>
+
+        <img src={this.state.urls[14]} alt="fifteenth"/>
+        <button value={this.state.urls[14]} onClick={this.handleClick}>Select</button>
 
       </StyledGallery>
     )
