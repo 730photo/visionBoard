@@ -30,7 +30,6 @@ Technologies Used:
 Future Development:
 <ul>
 <li>Add a toggle edit function</li>
-<li>Add a toggle edit function</li>
 <li>Add styling so somebody would actually want to use it.</li>
 ‪‪<li>be able to keep the starting 5 there when the user refresh the page</li>
 <li>Add player names</li>
