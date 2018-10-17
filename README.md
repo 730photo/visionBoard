@@ -41,3 +41,9 @@ Future Development:
 </h5>
 
 Trello (https://trello.com/b/UVaBCIpJ/vision-board)
+
+ERD (https://realtimeboard.com/welcomeonboard/UhgwrJbqITOVbZiaY41S6NPQSWLMVS4ntgjqO7JbAHSSX4Rlf6LM6Wh3ig6N45qA)
+
+Deployed App (https://pacific-coast-23256.herokuapp.com/)
+
+
