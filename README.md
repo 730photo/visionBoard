@@ -46,5 +46,5 @@ ERD (https://realtimeboard.com/welcomeonboard/UhgwrJbqITOVbZiaY41S6NPQSWLMVS4ntg
 
 Deployed App (https://pacific-coast-23256.herokuapp.com/)
 
-WIREFRAME (image.jpeg)
+WIREFRAME (image1.jpeg)
 
